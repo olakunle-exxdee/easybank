@@ -1,0 +1,23 @@
+$darkblue: hsl(233, 26%, 24%);
+$LimeGreen: #31d35c;
+$BrightCyan: #2bb7da;
+$GrayishBlue: hsl(233, 8%, 62%);
+$LightGrayishBlue: hsl(220, 16%, 96%);
+$VeryLightGray: hsl(0, 0%, 98%);
+$White: hsl(0, 0%, 100%);
+
+@mixin flexy {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin transit {
+  transition: all 300ms ease-in-out;
+}
+
+@mixin respond {
+  @media (min-width: 700px) {
+    @content;
+  }
+}

@@ -1,0 +1,41 @@
+@import "./reset";
+@import "./variables";
+@import "./navbar";
+@import "./hero";
+@import "./footer";
+
+.bank {
+  background: $LightGrayishBlue;
+  color: $darkblue;
+  text-align: center;
+  padding: 4em 1em;
+
+  h1 {
+    font-weight: 300;
+  }
+  p {
+    color: $GrayishBlue;
+    font-weight: 300;
+    line-height: 1.5;
+  }
+  //   heading
+  &__heading {
+    h1 {
+      font-size: 2rem;
+      padding: 0.5em 1em;
+    }
+    p {
+      padding-bottom: 3em;
+    }
+  }
+  &__item {
+    h1 {
+      padding: 0.5em 1em;
+    }
+    p {
+      padding-bottom: 3em;
+    }
+  }
+}
+
+@import "./responsive";

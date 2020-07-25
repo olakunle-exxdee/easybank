@@ -1,0 +1,138 @@
+.header {
+  position: relative;
+  z-index: 1;
+  background: $White;
+
+  &.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  .overlay {
+    position: fixed;
+    top: 2.2rem;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+    transform-origin: bottom;
+    @include transit;
+    &.open {
+      z-index: -10;
+      background: linear-gradient(lighten($darkblue, 30%), transparent);
+      display: block;
+      @include transit;
+    }
+  }
+  // navbar
+  .navbar {
+    &__content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0 1em;
+      .logo {
+        margin-top: 10px;
+      }
+      // hamburger start
+      .hamburger {
+        cursor: pointer;
+        height: 24px;
+
+        // menu
+        .menu {
+          position: relative;
+          display: inline-block;
+          background: black;
+          width: 26px;
+          height: 2px;
+          @include transit;
+          // open class
+          &.open {
+            background: transparent;
+            @include transit;
+            &::before {
+              transform: rotate(45deg) translate(7px, 8px);
+              @include transit;
+            }
+            &::after {
+              @include transit;
+              transform: rotate(-45deg) translate(0px, 0);
+            }
+          }
+
+          &::before {
+            position: absolute;
+            content: "";
+            background: black;
+            width: 26px;
+            height: 2px;
+            top: -5px;
+            @include transit;
+          }
+
+          &::after {
+            position: absolute;
+            content: "";
+            background: black;
+            width: 26px;
+            height: 2px;
+            top: 5px;
+            @include transit;
+          }
+        }
+      }
+      //hamburger ends
+    }
+
+    // .navbar list
+    &__list {
+      margin: 2em;
+      text-align: center;
+      background: white;
+      border-radius: 5px;
+      display: none;
+      @include transit;
+      &.open {
+        min-width: 10rem;
+        position: absolute;
+        left: 0;
+        right: 0;
+        padding: 2em;
+        display: block;
+        @include transit;
+      }
+
+      // items
+      .item {
+        list-style: none;
+      }
+
+      // links
+      .link {
+        display: inline-block;
+        text-decoration: none;
+        padding: 1em 0;
+        color: $darkblue;
+        @include transit;
+        &:hover {
+          color: $LimeGreen;
+          @include transit;
+        }
+      }
+    }
+    // button
+    .btn {
+      display: inline-block;
+      background: linear-gradient(to left, #31d35c, #2bb7da);
+      color: $White;
+      text-align: center;
+      border-radius: 40px;
+      padding: 0.6em 0.9em;
+      text-decoration: none;
+      font-weight: 700;
+      display: none;
+    }
+  }
+  // navbar ends
+}
