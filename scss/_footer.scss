@@ -20,6 +20,10 @@
     img + img {
       margin-left: 1em;
     }
+
+    img {
+      cursor: pointer;
+    }
   }
   &__column1 {
     display: flex;
@@ -28,6 +32,10 @@
     flex-direction: column;
     .links {
       padding: 0.5em 0;
+
+      &:hover {
+        color: $LimeGreen;
+      }
     }
   }
   &__column2 {
@@ -37,6 +45,9 @@
     flex-direction: column;
     .links {
       padding: 0.5em 0;
+      &:hover {
+        color: $LimeGreen;
+      }
     }
   }
   &__copyright {

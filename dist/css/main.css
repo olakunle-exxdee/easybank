@@ -319,6 +319,10 @@ body {
   margin-left: 1em;
 }
 
+.footer__social img {
+  cursor: pointer;
+}
+
 .footer__column1 {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -339,6 +343,10 @@ body {
   padding: 0.5em 0;
 }
 
+.footer__column1 .links:hover {
+  color: #31d35c;
+}
+
 .footer__column2 {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -357,6 +365,10 @@ body {
 
 .footer__column2 .links {
   padding: 0.5em 0;
+}
+
+.footer__column2 .links:hover {
+  color: #31d35c;
 }
 
 .footer__copyright .btn {
