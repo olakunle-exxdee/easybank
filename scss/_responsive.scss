@@ -1,6 +1,8 @@
 @include respond {
   // header
   .header {
+    padding: 0.5em;
+    z-index: 3;
     .overlay {
       display: none;
     }
@@ -160,5 +162,27 @@
         margin-top: 0;
       }
     }
+  }
+  .anime {
+    position: absolute;
+    min-width: 100%;
+    min-height: 100vh;
+    top: 0;
+    left: 0;
+    display: flex;
+    z-index: 2;
+    @include transit;
+  }
+  .one {
+    flex: 1;
+    background: #31d39d;
+  }
+  .two {
+    flex: 1;
+    background: #31d39d;
+  }
+  .three {
+    flex: 1;
+    background: #31d39d;
   }
 }

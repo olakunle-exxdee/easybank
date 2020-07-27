@@ -89,7 +89,7 @@
     &__list {
       margin: 2em;
       text-align: center;
-      background: white;
+      background: $White;
       border-radius: 5px;
       display: none;
       @include transit;

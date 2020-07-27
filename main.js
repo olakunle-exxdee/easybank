@@ -2,6 +2,27 @@ const hamburger = document.querySelector(".hamburger");
 const menu = document.querySelector(".menu");
 const list = document.querySelector(".navbar__list");
 const overlay = document.querySelector(".overlay");
+const anime = document.querySelector(".anime");
+const one = document.querySelector(".one");
+const two = document.querySelector(".two");
+const three = document.querySelector(".three");
+const heroImg = document.querySelector(".hero__img");
+const heroContent = document.querySelector(".hero__content");
+
+gsap.to(one, { y: "-100vh", delay: 0.2 });
+gsap.to(two, { y: "-100vh", delay: 0.5 });
+gsap.to(three, { y: "-100vh", delay: 0.9 });
+gsap.fromTo(
+  heroImg,
+  { x: "0", opacity: 0 },
+  { x: 0, opacity: 1, ease: "back.out(2)", delay: 1.3 }
+);
+
+gsap.fromTo(
+  heroContent,
+  { x: "0", opacity: 0 },
+  { x: 0, opacity: 1, ease: "back.out(2)", delay: 1.5 }
+);
 
 let showMenu = false;
 
